@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import backgroundImg from "../assets/pictures/DSC_6440.jpg";
+import backgroundImg from "../assets/pictures/pre-wedding 3.jpg";
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
