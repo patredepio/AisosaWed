@@ -6,14 +6,20 @@ import Schedule from './components/Schedule';
 import Hotels from './components/Hotels';
 import Gallery from './components/Gallery';
 import TriviaGame from './components/TriviaGame';
+import Loader from './components/Loader';
 import './App.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('countdown');
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadComplete = () => {
+    setIsLoading(false);
+  };
 
   const handleNavigation = (section) => {
     setActiveSection(section);
-    
+
     // Smooth scroll to main content for screen readers
     const mainElement = document.getElementById('main');
     if (mainElement) {
@@ -40,13 +46,18 @@ function App() {
     }
   };
 
+  // Show loader if still loading
+  if (isLoading) {
+    return <Loader onLoadComplete={handleLoadComplete} />;
+  }
+
   return (
     <div className="app">
-      <Header 
-        activeSection={activeSection} 
-        onNavigate={handleNavigation} 
+      <Header
+        activeSection={activeSection}
+        onNavigate={handleNavigation}
       />
-      
+
       <main id="main" className="main" role="main">
         {renderActiveSection()}
       </main>
@@ -61,7 +72,7 @@ function App() {
           Made with 💕 for Aisosa & Kunle's Wedding • A Kind Of Love #AKindOfLove • November 21-22, 2025
         </p>
         <p className="text-xs" style={{ margin: '0.5rem 0 0 0', color: 'var(--color-text-light)' }}>
-          Built with React & Express • Accessible & Mobile-First Design
+          © {new Date().getFullYear()} Padres Studios. All rights reserved.
         </p>
       </footer>
     </div>
