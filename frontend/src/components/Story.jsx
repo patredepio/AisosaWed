@@ -25,7 +25,7 @@ function Story() {
     },
     {
       id: 4,
-      date: 'November 21, 2025',
+      date: 'November 20, 2025',
       title: 'Traditional Wedding',
       description: 'We celebrate our union in the traditional way at the bride\'s father\'s residence on Guobadia Avenue, surrounded by our families and honoring our heritage.',
       icon: '🏠'
@@ -34,7 +34,7 @@ function Story() {
       id: 5,
       date: 'November 22, 2025',
       title: 'White Wedding',
-      description: 'At RCCG Christ Centre, we exchange vows before God and our loved ones. This marks the beginning of our married life together - #AKindOfLove that will last forever.',
+      description: 'At The Redeem Christian Church of God Upper Room Parish, we exchange vows before God and our loved ones. This marks the beginning of our married life together - #AKindOfLove that will last forever.',
       icon: '💒'
     }
   ];
@@ -203,7 +203,7 @@ function Story() {
           </p>
           <p className="text-lg" style={{ margin: 0, fontStyle: 'italic', color: 'var(--color-secondary)' }}>
             "True love stories never have endings." 💕<br/>
-            <span className="text-sm" style={{ opacity: 0.8 }}>#AKindOfLove • November 21-22, 2025</span>
+            <span className="text-sm" style={{ opacity: 0.8 }}>#AKindOfLove • November 20 & 22, 2025</span>
           </p>
         </div>
       </div>

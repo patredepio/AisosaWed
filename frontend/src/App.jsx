@@ -56,7 +56,7 @@ function App() {
             borderTop: '1px solid var(--color-accent)'
           }}>
             <p className="text-sm" style={{ margin: 0, color: 'var(--color-text-light)' }}>
-              Made with 💕 for Aisosa & Kunle's Wedding • A Kind Of Love #AKindOfLove • November 21-22, 2025
+              Made with 💕 for Aisosa & Kunle's Wedding • A Kind Of Love #AKindOfLove • November 20 & 22, 2025
             </p>
             <p className="text-xs" style={{ margin: '0.5rem 0 0 0', color: 'var(--color-text-light)' }}>
               © {new Date().getFullYear()} Padres Studios. All rights reserved.

@@ -10,8 +10,8 @@ function Countdown() {
   });
   const [isWeddingDay, setIsWeddingDay] = useState(false);
 
-  // Set wedding date - November 22, 2025 - Aisosa & Kunle - A Kind Of Love
-  const weddingDate = new Date("2025-11-22T00:00:00").getTime();
+  // Set wedding date - November 20, 2025 (Traditional) & November 22, 2025 (White Wedding) - Aisosa & Kunle - A Kind Of Love
+  const weddingDate = new Date("2025-11-20T00:00:00").getTime();
 
   useEffect(() => {
     const timer = setInterval(() => {

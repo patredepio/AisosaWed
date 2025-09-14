@@ -13,15 +13,15 @@ function TriviaGame() {
       id: 2,
       question: "When is their traditional wedding ceremony?",
       options: ["November 20, 2025", "November 21, 2025", "November 22, 2025", "November 23, 2025"],
-      correct: 1,
-      explanation: "The traditional wedding ceremony takes place on November 21, 2025 at the bride's father's residence."
+      correct: 0,
+      explanation: "The traditional wedding ceremony takes place on November 20, 2025 at the bride's father's residence."
     },
     {
       id: 3,
       question: "Where will their white wedding ceremony be held?",
-      options: ["St. Peter's Cathedral", "RCCG Christ Centre", "Holy Trinity Church", "Victory Chapel"],
+      options: ["St. Peter's Cathedral", "The Redeem Christian Church of God Upper Room Parish", "Holy Trinity Church", "Victory Chapel"],
       correct: 1,
-      explanation: "Their white wedding ceremony will be held at RCCG Christ Centre on November 22, 2025."
+      explanation: "Their white wedding ceremony will be held at The Redeem Christian Church of God Upper Room Parish on November 22, 2025."
     },
     {
       id: 4,
@@ -33,9 +33,9 @@ function TriviaGame() {
     {
       id: 5,
       question: "What street is the white wedding venue located on?",
-      options: ["Etete Road", "Guobadia Street", "Airport Road", "Mission Road"],
+      options: ["Etete Road", "Redeemed Christian Church way", "Airport Road", "Mission Road"],
       correct: 1,
-      explanation: "RCCG Christ Centre is located at 13 Guobadia Street Off Etete Road in Benin City."
+      explanation: "The Redeem Christian Church of God Upper Room Parish is located at No. 3 Redeemed Christian Church way, off Adesuwa Girls Grammar School Road in Benin City."
     },
     {
       id: 6,

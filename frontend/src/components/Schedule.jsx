@@ -1,26 +1,44 @@
+import HouseIcon from './icons/HouseIcon';
+import ChurchIcon from './icons/ChurchIcon';
+import ReceptionIcon from './icons/ReceptionIcon';
+
 function Schedule() {
   const events = [
     {
       id: 1,
-      date: 'November 21, 2025',
+      date: 'November 20, 2025',
       time: 'All Day',
       title: 'Traditional Wedding',
       location: 'Bride\'s Father\'s Residence',
       address: '45B Guobadia Avenue Off Etete GRA, Benin City',
       description: 'Join us for the traditional wedding ceremony at the bride\'s family home.',
-      icon: '🏠',
-      duration: 'Full Day'
+      icon: <HouseIcon color="var(--color-primary)" size="2rem" />,
+      duration: 'Full Day',
+      googleMapsUrl: 'https://maps.google.com/?q=45B+Guobadia+Avenue+Off+Etete+GRA,+Benin+City,+Nigeria'
     },
     {
       id: 2,
       date: 'November 22, 2025',
-      time: 'TBD',
+      time: '12:00 PM',
       title: 'White Wedding',
-      location: 'RCCG Christ Centre',
-      address: '13 Guobadia Street Off Etete Road, Benin City',
+      location: 'The Redeem Christian Church of God Upper Room Parish',
+      address: 'No. 3 Redeemed Christian Church way, off Adesuwa Girls Grammar School Road, G.R.A. Benin City, Edo State, Nigeria',
       description: 'Join us as we exchange vows in a beautiful church ceremony.',
-      icon: '💒',
-      duration: 'TBD'
+      icon: <ChurchIcon color="var(--color-primary)" size="2rem" />,
+      duration: '2 Hours',
+      googleMapsUrl: 'https://maps.google.com/?q=No.+3+Redeemed+Christian+Church+way,+off+Adesuwa+Girls+Grammar+School+Road,+G.R.A.+Benin+City,+Edo+State,+Nigeria'
+    },
+    {
+      id: 3,
+      date: 'November 22, 2025',
+      time: '2:00 PM',
+      title: 'Reception',
+      location: 'Edo Hotel Marquee',
+      address: 'Okada Avenue beside National Industrial Court of Nigeria GRA Benin City Edo State',
+      description: 'Celebrate with us at the reception with dinner, dancing, and festivities.',
+      icon: <ReceptionIcon color="var(--color-secondary)" size="2rem" />,
+      duration: '6 Hours',
+      googleMapsUrl: 'https://maps.google.com/?q=Okada+Avenue+beside+National+Industrial+Court+of+Nigeria+GRA+Benin+City+Edo+State'
     }
   ];
 
@@ -34,6 +52,11 @@ function Schedule() {
       title: 'Airport Transportation',
       description: 'A bus will be provided by the couple from the airport to the venue on the wedding day. Contact us for pickup details.',
       icon: '🚌'
+    },
+    {
+      title: 'Wedding Day Colors',
+      description: 'For the white wedding ceremony, the colors of the day are Olive Green, Mint Green, Peach, and Cornflower Blue. Feel free to incorporate these beautiful colors in your attire.',
+      icon: '🎨'
     }
   ];
 
@@ -41,7 +64,7 @@ function Schedule() {
     <section className="section">
       <h2 className="section-title text-2xl">Wedding Day Schedule</h2>
       <p className="text-base" style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--color-text-light)' }}>
-        November 21-22, 2025 • A Kind Of Love #AKindOfLove
+        November 20 & 22, 2025 • A Kind Of Love #AKindOfLove
       </p>
 
       {/* Main Events Timeline */}
@@ -57,8 +80,10 @@ function Schedule() {
               <div className="schedule-time-icon" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '80px', flexShrink: 0 }}>
                 <div
                   style={{
-                    fontSize: '2rem',
-                    marginBottom: '0.5rem'
+                    marginBottom: '0.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
                   }}
                   aria-hidden="true"
                 >
@@ -87,6 +112,23 @@ function Schedule() {
                   <div className="text-sm" style={{ color: 'var(--color-text-light)' }}>
                     {event.address}
                   </div>
+                  {event.googleMapsUrl && (
+                    <a
+                      href={event.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn"
+                      style={{
+                        fontSize: 'var(--font-xs)',
+                        padding: 'var(--space-xs) var(--space-sm)',
+                        marginTop: 'var(--space-xs)',
+                        display: 'inline-block',
+                        textDecoration: 'none'
+                      }}
+                    >
+                      📍 View on Google Maps
+                    </a>
+                  )}
                 </div>
                 <p className="text-base" style={{ margin: 0, lineHeight: '1.5' }}>
                   {event.description}
