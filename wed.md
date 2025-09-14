@@ -1,98 +1,15 @@
-node:internal/modules/cjs/loader:1386
-throw err;
-^
-Error: Cannot find module '/app/index.js'
-at Function.\_resolveFilename (node:internal/modules/cjs/loader:1383:15)
-at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
-at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
-at Function.\_load (node:internal/modules/cjs/loader:1192:37)
-at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-at node:internal/main/run_main_module:36:49 {
-code: 'MODULE_NOT_FOUND',
-requireStack: []
-}
-Node.js v22.19.0
-node:internal/modules/cjs/loader:1386
-throw err;
-^
-Error: Cannot find module '/app/index.js'
-at Function.\_resolveFilename (node:internal/modules/cjs/loader:1383:15)
-at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
-at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
-at Function.\_load (node:internal/modules/cjs/loader:1192:37)
-at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-at node:internal/main/run_main_module:36:49 {
-code: 'MODULE_NOT_FOUND',
-requireStack: []
-}
-Node.js v22.19.0
-node:internal/modules/cjs/loader:1386
-throw err;
-^
-Error: Cannot find module '/app/index.js'
-at Function.\_resolveFilename (node:internal/modules/cjs/loader:1383:15)
-at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
-at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
-at Function.\_load (node:internal/modules/cjs/loader:1192:37)
-at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-at node:internal/main/run_main_module:36:49 {
-code: 'MODULE_NOT_FOUND',
-requireStack: []
-}
-Node.js v22.19.0
-node:internal/modules/cjs/loader:1386
-throw err;
-^
-Error: Cannot find module '/app/index.js'
-at Function.\_resolveFilename (node:internal/modules/cjs/loader:1383:15)
-at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
-at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
-at Function.\_load (node:internal/modules/cjs/loader:1192:37)
-at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-at node:internal/main/run_main_module:36:49 {
-code: 'MODULE_NOT_FOUND',
-requireStack: []
-}
-Node.js v22.19.0
-node:internal/modules/cjs/loader:1386
-throw err;
-^
-Error: Cannot find module '/app/index.js'
-at Function.\_resolveFilename (node:internal/modules/cjs/loader:1383:15)
-at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
-at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
-at Function.\_load (node:internal/modules/cjs/loader:1192:37)
-at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-at node:internal/main/run_main_module:36:49 {
-code: 'MODULE_NOT_FOUND',
-requireStack: []
-}
-Node.js v22.19.0
-node:internal/modules/cjs/loader:1386
-throw err;
-^
-Error: Cannot find module '/app/index.js'
-at Function.\_resolveFilename (node:internal/modules/cjs/loader:1383:15)
-at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
-at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
-at Function.\_load (node:internal/modules/cjs/loader:1192:37)
-at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
-at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-at node:internal/main/run_main_module:36:49 {
-code: 'MODULE_NOT_FOUND',
-requireStack: []
-}
-Node.js v22.19.0
-node:internal/modules/cjs/loader:1386
-throw err;
+npm run build
+550ms
+npm warn config production Use `--omit=dev` instead.
+
+> aisosawedapp@1.0.0 build
+> npm run frontend:build
+> npm warn config production Use `--omit=dev` instead.
+> aisosawedapp@1.0.0 frontend:build
+> cd frontend && npm run build
+> npm warn config production Use `--omit=dev` instead.
+> aisosa-wed@0.0.0 build
+> vite build
+> sh: 1: vite: not found
+> ERROR: failed to build: failed to solve: process "npm run build" did not complete successfully: exit code: 127
+> this is error i am getting when on my host account
