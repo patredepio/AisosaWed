@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run frontend:dev",
-    "start": "env-cmd -f .env node server.js",
+    "start": "node server.js",
     "frontend:dev": "cd frontend && npm run dev",
     "frontend:build": "cd frontend && npm run build",
     "frontend:install": "cd frontend && npm install",
