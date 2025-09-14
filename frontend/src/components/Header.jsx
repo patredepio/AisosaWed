@@ -4,9 +4,12 @@ function Header({ activeSection, onNavigate }) {
       <a href="#main" className="skip-link">
         Skip to main content
       </a>
-      <h1 className="text-3xl">Sarah & Michael</h1>
+      <h1 className="text-3xl">Aisosa & Kunle</h1>
+      <p className="text-lg" style={{ margin: '0.25rem 0', opacity: 0.9, fontStyle: 'italic' }}>
+        A Kind Of Love #AKindOfLove
+      </p>
       <p className="text-lg" style={{ margin: '0.5rem 0 0 0', opacity: 0.9 }}>
-        February 14, 2025
+        November 21-22, 2025
       </p>
       <nav className="nav" role="navigation" aria-label="Main navigation">
         <button
@@ -29,6 +32,13 @@ function Header({ activeSection, onNavigate }) {
           aria-current={activeSection === 'schedule' ? 'page' : undefined}
         >
           Schedule
+        </button>
+        <button
+          className={`nav-link text-base ${activeSection === 'hotels' ? 'active' : ''}`}
+          onClick={() => onNavigate('hotels')}
+          aria-current={activeSection === 'hotels' ? 'page' : undefined}
+        >
+          Hotels
         </button>
         <button
           className={`nav-link text-base ${activeSection === 'gallery' ? 'active' : ''}`}

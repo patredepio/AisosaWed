@@ -9,7 +9,7 @@ function Countdown() {
   });
   const [isWeddingDay, setIsWeddingDay] = useState(false);
 
-  // Set wedding date - February 14, 2025
+  // Set wedding date - November 22, 2025 - Aisosa & Kunle - A Kind Of Love
   const weddingDate = new Date("2025-11-22T00:00:00").getTime();
 
   useEffect(() => {
@@ -84,29 +84,67 @@ function Countdown() {
     <section
       className='section'
       aria-live='polite'
+      style={{
+        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/DSC_6440.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        borderRadius: "var(--radius-lg)",
+        color: "white",
+        maxWidth: "600px",
+        margin: "0 auto",
+        position: "relative",
+      }}
     >
-      <h2 className='section-title text-2xl'>Countdown to Our Wedding</h2>
+      <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <h1
+          className='text-2xl'
+          style={{
+            margin: "0 0 1rem 0",
+            fontWeight: "normal",
+            letterSpacing: "2px",
+          }}
+        >
+          #AKindOfLove
+        </h1>
+        <h2
+          className='text-xl'
+          style={{ margin: 0, opacity: 0.9 }}
+        >
+          Countdown to Our Wedding
+        </h2>
+      </div>
+
       <div
-        className='countdown-grid'
         style={{
           display: "grid",
-          gap: "var(--space-lg)",
-          maxWidth: "900px",
+          gridTemplateColumns: "repeat(4, 1fr)",
+          gap: "var(--space-md)",
+          maxWidth: "400px",
           margin: "0 auto",
         }}
       >
         <div
-          className='card'
-          style={{ textAlign: "center" }}
+          style={{
+            textAlign: "center",
+            // background: "rgba(255, 255, 255, 0.9)",
+            padding: "var(--space-md)",
+            borderRadius: "var(--radius-md)",
+            color: "var(--color-text)",
+          }}
         >
           <div
-            className='text-3xl'
-            style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}
+            className='text-2xl'
+            style={{
+              color: "var(--color-primary)",
+              marginBottom: "0.25rem",
+              fontWeight: "bold",
+            }}
           >
             {timeLeft.days}
           </div>
           <div
-            className='text-base'
+            className='text-xs'
             style={{ color: "var(--color-text-light)" }}
           >
             {timeLeft.days === 1 ? "Day" : "Days"}
@@ -114,17 +152,26 @@ function Countdown() {
         </div>
 
         <div
-          className='card'
-          style={{ textAlign: "center" }}
+          style={{
+            textAlign: "center",
+            // background: "rgba(255, 255, 255, 0.9)",
+            padding: "var(--space-md)",
+            borderRadius: "var(--radius-md)",
+            color: "var(--color-text)",
+          }}
         >
           <div
-            className='text-3xl'
-            style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}
+            className='text-2xl'
+            style={{
+              color: "var(--color-primary)",
+              marginBottom: "0.25rem",
+              fontWeight: "bold",
+            }}
           >
             {timeLeft.hours}
           </div>
           <div
-            className='text-base'
+            className='text-xs'
             style={{ color: "var(--color-text-light)" }}
           >
             {timeLeft.hours === 1 ? "Hour" : "Hours"}
@@ -132,17 +179,26 @@ function Countdown() {
         </div>
 
         <div
-          className='card'
-          style={{ textAlign: "center" }}
+          style={{
+            textAlign: "center",
+            // background: "rgba(255, 255, 255, 0.9)",
+            padding: "var(--space-md)",
+            borderRadius: "var(--radius-md)",
+            color: "var(--color-text)",
+          }}
         >
           <div
-            className='text-3xl'
-            style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}
+            className='text-2xl'
+            style={{
+              color: "var(--color-primary)",
+              marginBottom: "0.25rem",
+              fontWeight: "bold",
+            }}
           >
             {timeLeft.minutes}
           </div>
           <div
-            className='text-base'
+            className='text-xs'
             style={{ color: "var(--color-text-light)" }}
           >
             {timeLeft.minutes === 1 ? "Minute" : "Minutes"}
@@ -150,17 +206,26 @@ function Countdown() {
         </div>
 
         <div
-          className='card'
-          style={{ textAlign: "center" }}
+          style={{
+            textAlign: "center",
+            // background: "rgba(255, 255, 255, 0.9)",
+            padding: "var(--space-md)",
+            borderRadius: "var(--radius-md)",
+            color: "var(--color-text)",
+          }}
         >
           <div
-            className='text-3xl'
-            style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}
+            className='text-2xl'
+            style={{
+              color: "var(--color-primary)",
+              marginBottom: "0.25rem",
+              fontWeight: "bold",
+            }}
           >
             {timeLeft.seconds}
           </div>
           <div
-            className='text-base'
+            className='text-xs'
             style={{ color: "var(--color-text-light)" }}
           >
             {timeLeft.seconds === 1 ? "Second" : "Seconds"}
@@ -169,7 +234,16 @@ function Countdown() {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "2rem" }}>
-        <p className='text-lg'>Until we say "I do" My Love 💕</p>
+        <p
+          className='text-lg'
+          style={{
+            margin: 0,
+            opacity: 0.95,
+            textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
+          }}
+        >
+          Until we say "I do" My Love 💕
+        </p>
       </div>
     </section>
   );

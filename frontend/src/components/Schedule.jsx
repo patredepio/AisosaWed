@@ -2,43 +2,25 @@ function Schedule() {
   const events = [
     {
       id: 1,
-      time: '2:00 PM',
-      title: 'Ceremony',
-      location: 'Rose Garden Chapel',
-      address: '123 Wedding Lane, Love City',
-      description: 'Join us as we exchange vows in a beautiful outdoor ceremony surrounded by blooming roses.',
-      icon: '💒',
-      duration: '45 minutes'
+      date: 'November 21, 2025',
+      time: 'All Day',
+      title: 'Traditional Wedding',
+      location: 'Bride\'s Father\'s Residence',
+      address: '45B Guobadia Avenue Off Etete GRA, Benin City',
+      description: 'Join us for the traditional wedding ceremony at the bride\'s family home.',
+      icon: '🏠',
+      duration: 'Full Day'
     },
     {
       id: 2,
-      time: '3:00 PM',
-      title: 'Cocktail Hour',
-      location: 'Garden Terrace',
-      address: 'Same venue - outdoor terrace',
-      description: 'Enjoy signature cocktails, light appetizers, and mingling while we take photos.',
-      icon: '🥂',
-      duration: '1 hour'
-    },
-    {
-      id: 3,
-      time: '4:30 PM',
-      title: 'Reception',
-      location: 'Grand Ballroom',
-      address: 'Same venue - main hall',
-      description: 'Dinner, speeches, and dancing to celebrate our new beginning together.',
-      icon: '🍽️',
-      duration: '4 hours'
-    },
-    {
-      id: 4,
-      time: '8:30 PM',
-      title: 'Dancing & Celebration',
-      location: 'Grand Ballroom',
-      address: 'Same venue - dance floor',
-      description: 'Let\'s dance the night away! The party continues with music, laughter, and joy.',
-      icon: '💃',
-      duration: 'Until late'
+      date: 'November 22, 2025',
+      time: 'TBD',
+      title: 'White Wedding',
+      location: 'RCCG Christ Centre',
+      address: '13 Guobadia Street Off Etete Road, Benin City',
+      description: 'Join us as we exchange vows in a beautiful church ceremony.',
+      icon: '💒',
+      duration: 'TBD'
     }
   ];
 
@@ -62,6 +44,11 @@ function Schedule() {
       title: 'Accessibility',
       description: 'The venue is fully wheelchair accessible. Please contact us if you need any special accommodations.',
       icon: '♿'
+    },
+    {
+      title: 'Airport Transportation',
+      description: 'A bus will be provided by the couple from the airport to the venue on the wedding day. Contact us for pickup details.',
+      icon: '🚌'
     }
   ];
 
@@ -69,7 +56,7 @@ function Schedule() {
     <section className="section">
       <h2 className="section-title text-2xl">Wedding Day Schedule</h2>
       <p className="text-base" style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--color-text-light)' }}>
-        February 14, 2025 • Valentine's Day
+        November 21-22, 2025 • A Kind Of Love #AKindOfLove
       </p>
 
       {/* Main Events Timeline */}
@@ -80,9 +67,9 @@ function Schedule() {
         
         <div className="grid" style={{ gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
           {events.map((event) => (
-            <div key={event.id} className="card" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+            <div key={event.id} className="card schedule-card" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', flexDirection: 'row' }}>
               {/* Time and Icon */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '80px' }}>
+              <div className="schedule-time-icon" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '80px', flexShrink: 0 }}>
                 <div
                   style={{
                     fontSize: '2rem',
@@ -105,6 +92,9 @@ function Schedule() {
                 <h4 className="text-lg" style={{ margin: '0 0 0.5rem 0', color: 'var(--color-secondary)' }}>
                   {event.title}
                 </h4>
+                <div className="text-sm" style={{ marginBottom: '0.5rem', color: 'var(--color-primary)', fontWeight: 'bold' }}>
+                  {event.date}
+                </div>
                 <div style={{ marginBottom: '0.5rem' }}>
                   <div className="text-md" style={{ fontWeight: 'bold', color: 'var(--color-text)' }}>
                     {event.location}

@@ -55,11 +55,16 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* App container */
 .app {
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -256,20 +261,37 @@ body {
   }
 }
 
+/* Schedule responsive styles */
+@media (max-width: 600px) {
+  .schedule-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .schedule-time-icon {
+    flex-direction: row !important;
+    gap: 1rem;
+    align-items: center !important;
+    justify-content: center;
+    margin-bottom: 1rem;
+    min-width: auto !important;
+  }
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .main {
     padding: var(--space-md) var(--space-sm);
   }
-  
+
   .section {
     padding: var(--space-md);
   }
-  
+
   .nav {
     gap: var(--space-sm);
   }
-  
+
   .nav-link {
     font-size: var(--font-sm);
     padding: var(--space-xs) var(--space-sm);
