@@ -1,39 +1,41 @@
+import LazyImage from './LazyImage';
+
 function Story() {
   const milestones = [
     {
       id: 1,
-      date: 'March 2020',
-      title: 'First Meeting',
-      description: 'We met at a coffee shop in downtown. Sarah was reading a book about web development, and Michael couldn\'t help but ask about it. Little did we know this would be the start of our beautiful journey together.',
-      icon: '☕'
+      date: 'First Meeting',
+      title: 'When Our Paths Crossed',
+      description: 'From the moment we met, there was something special between us. The connection was instant, and we knew this was the beginning of something beautiful - truly A Kind Of Love.',
+      icon: '💫'
     },
     {
       id: 2,
-      date: 'August 2020',
-      title: 'First Date',
-      description: 'Our first official date was a picnic in Central Park. We talked for hours about our dreams, goals, and favorite movies. The connection was instant and undeniable.',
-      icon: '🌳'
+      date: 'Growing Together',
+      title: 'Building Our Foundation',
+      description: 'Through laughter, shared dreams, and countless memories, our bond grew stronger each day. We discovered that love isn\'t just a feeling - it\'s a choice we make every moment.',
+      icon: '🌱'
     },
     {
       id: 3,
-      date: 'December 2021',
-      title: 'Moving In Together',
-      description: 'After a year and a half of dating, we decided to take the big step and move in together. Our little apartment became our sanctuary and the place where our love grew even stronger.',
-      icon: '🏠'
-    },
-    {
-      id: 4,
-      date: 'June 2023',
-      title: 'The Proposal',
-      description: 'Michael proposed during a sunset walk on the beach where we had our second date. With the waves gently lapping at our feet and the golden sun setting behind us, Sarah said yes to forever.',
+      date: 'The Proposal',
+      title: 'A Promise of Forever',
+      description: 'In a moment filled with pure joy and love, we decided to take the next step in our journey together. The proposal was perfect because it came from the heart.',
       icon: '💍'
     },
     {
+      id: 4,
+      date: 'November 21, 2025',
+      title: 'Traditional Wedding',
+      description: 'We celebrate our union in the traditional way at the bride\'s father\'s residence on Guobadia Avenue, surrounded by our families and honoring our heritage.',
+      icon: '🏠'
+    },
+    {
       id: 5,
-      date: 'February 2025',
-      title: 'Our Wedding Day',
-      description: 'The day we\'ve been planning and dreaming about is finally here. Surrounded by our family and friends, we\'ll promise to love and cherish each other for all the days of our lives.',
-      icon: '👰‍♀️🤵‍♂️'
+      date: 'November 22, 2025',
+      title: 'White Wedding',
+      description: 'At RCCG Christ Centre, we exchange vows before God and our loved ones. This marks the beginning of our married life together - #AKindOfLove that will last forever.',
+      icon: '💒'
     }
   ];
 
@@ -41,8 +43,64 @@ function Story() {
     <section className="section">
       <h2 className="section-title text-2xl">Our Love Story</h2>
       <p className="text-base" style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--color-text-light)' }}>
-        The journey that led us to this magical day
+        The journey of Aisosa & Kunle - #AKindOfLove
       </p>
+
+      {/* Engagement Photo */}
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <div
+          className="story-image-container"
+          style={{
+            maxWidth: '400px',
+            margin: '0 auto',
+            borderRadius: 'var(--radius-lg)',
+            overflow: 'hidden',
+            boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
+            position: 'relative'
+          }}
+        >
+          <div style={{ position: 'relative', width: '100%' }}>
+            <LazyImage
+              src="/images/engagement/engagement.jpg"
+              alt="Aisosa and Kunle's engagement photo showing their beautiful ring"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                transition: 'transform 0.3s ease',
+                borderRadius: 'var(--radius-lg)'
+              }}
+              placeholder={
+                <div
+                  className="story-image-placeholder"
+                  style={{
+                    width: '100%',
+                    height: '300px',
+                    background: 'linear-gradient(135deg, var(--color-accent), var(--color-primary))',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    border: '2px dashed var(--color-primary)',
+                    opacity: 0.8,
+                    borderRadius: 'var(--radius-lg)'
+                  }}
+                >
+                  <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>💍</div>
+                  <p className="text-sm" style={{ margin: 0, color: 'var(--color-secondary)', fontStyle: 'italic' }}>
+                    Loading engagement photo...
+                  </p>
+                </div>
+              }
+            />
+          </div>
+          <div className="story-image-overlay">
+            <p className="text-base story-overlay-text">
+              The moment that changed everything 💍
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="timeline" style={{ position: 'relative', maxWidth: '800px', margin: '0 auto' }}>
         {milestones.map((milestone, index) => (
@@ -141,10 +199,11 @@ function Story() {
             Join Our Celebration
           </h3>
           <p className="text-base" style={{ margin: '0 0 1.5rem 0' }}>
-            We can't wait to share this special moment with all of you. Your love and support have been such an important part of our journey.
+            We can't wait to share this special moment with all of you. Your love and support mean the world to us as we begin this new chapter together.
           </p>
           <p className="text-lg" style={{ margin: 0, fontStyle: 'italic', color: 'var(--color-secondary)' }}>
-            "Love is not about how many days, months, or years you have been together. It's about how much you love each other every single day." 💕
+            "True love stories never have endings." 💕<br/>
+            <span className="text-sm" style={{ opacity: 0.8 }}>#AKindOfLove • November 21-22, 2025</span>
           </p>
         </div>
       </div>

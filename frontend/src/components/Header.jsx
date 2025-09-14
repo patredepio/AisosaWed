@@ -1,60 +1,74 @@
+import { useState } from 'react';
+
 function Header({ activeSection, onNavigate }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavigation = (section) => {
+    onNavigate(section);
+    setIsMenuOpen(false); // Close menu after navigation
+  };
+
+  const navigationItems = [
+    { id: 'countdown', label: 'Countdown' },
+    { id: 'story', label: 'Our Story' },
+    { id: 'schedule', label: 'Schedule' },
+    { id: 'hotels', label: 'Hotels' },
+    { id: 'gallery', label: 'Gallery' },
+    { id: 'trivia', label: 'Trivia' }
+  ];
+
   return (
-    <header className="header">
+    <header className="header-compact">
       <a href="#main" className="skip-link">
         Skip to main content
       </a>
-      <h1 className="text-3xl">Aisosa & Kunle</h1>
-      <p className="text-lg" style={{ margin: '0.25rem 0', opacity: 0.9, fontStyle: 'italic' }}>
-        A Kind Of Love #AKindOfLove
-      </p>
-      <p className="text-lg" style={{ margin: '0.5rem 0 0 0', opacity: 0.9 }}>
-        November 21-22, 2025
-      </p>
-      <nav className="nav" role="navigation" aria-label="Main navigation">
+
+      <div className="header-content">
+        <div className="header-title">
+          <h1 className="text-xl">Aisosa & Kunle</h1>
+          <span className="header-tag text-xs">#AKindOfLove</span>
+        </div>
+
         <button
-          className={`nav-link text-base ${activeSection === 'countdown' ? 'active' : ''}`}
-          onClick={() => onNavigate('countdown')}
-          aria-current={activeSection === 'countdown' ? 'page' : undefined}
+          className="menu-toggle"
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle navigation menu"
         >
-          Countdown
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
         </button>
-        <button
-          className={`nav-link text-base ${activeSection === 'story' ? 'active' : ''}`}
-          onClick={() => onNavigate('story')}
-          aria-current={activeSection === 'story' ? 'page' : undefined}
-        >
-          Our Story
-        </button>
-        <button
-          className={`nav-link text-base ${activeSection === 'schedule' ? 'active' : ''}`}
-          onClick={() => onNavigate('schedule')}
-          aria-current={activeSection === 'schedule' ? 'page' : undefined}
-        >
-          Schedule
-        </button>
-        <button
-          className={`nav-link text-base ${activeSection === 'hotels' ? 'active' : ''}`}
-          onClick={() => onNavigate('hotels')}
-          aria-current={activeSection === 'hotels' ? 'page' : undefined}
-        >
-          Hotels
-        </button>
-        <button
-          className={`nav-link text-base ${activeSection === 'gallery' ? 'active' : ''}`}
-          onClick={() => onNavigate('gallery')}
-          aria-current={activeSection === 'gallery' ? 'page' : undefined}
-        >
-          Gallery
-        </button>
-        <button
-          className={`nav-link text-base ${activeSection === 'trivia' ? 'active' : ''}`}
-          onClick={() => onNavigate('trivia')}
-          aria-current={activeSection === 'trivia' ? 'page' : undefined}
-        >
-          Trivia
-        </button>
+      </div>
+
+      <nav
+        className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        {navigationItems.map((item) => (
+          <button
+            key={item.id}
+            className={`nav-link text-base ${activeSection === item.id ? 'active' : ''}`}
+            onClick={() => handleNavigation(item.id)}
+            aria-current={activeSection === item.id ? 'page' : undefined}
+          >
+            {item.label}
+          </button>
+        ))}
       </nav>
+
+      {isMenuOpen && (
+        <div
+          className="menu-overlay"
+          onClick={toggleMenu}
+          aria-hidden="true"
+        ></div>
+      )}
     </header>
   );
 }

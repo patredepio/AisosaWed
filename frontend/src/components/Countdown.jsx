@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import LazyBackgroundImage from './LazyBackgroundImage';
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -81,20 +82,47 @@ function Countdown() {
   }
 
   return (
-    <section
+    <LazyBackgroundImage
+      src="/DSC_6440.jpg"
       className='section'
-      aria-live='polite'
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/DSC_6440.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        background: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))",
         borderRadius: "var(--radius-lg)",
         color: "white",
-        maxWidth: "600px",
+        maxWidth: "900px",
+        width: "100%",
+        minHeight: "500px",
         margin: "0 auto",
         position: "relative",
+        padding: "var(--space-2xl) var(--space-xl)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
       }}
+      placeholder={
+        <div
+          style={{
+            background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+            borderRadius: "var(--radius-lg)",
+            color: "white",
+            maxWidth: "900px",
+            width: "100%",
+            minHeight: "500px",
+            margin: "0 auto",
+            padding: "var(--space-2xl) var(--space-xl)",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>📸</div>
+          <p className="text-lg" style={{ margin: 0, opacity: 0.8 }}>
+            Loading background image...
+          </p>
+        </div>
+      }
+      {...({ 'aria-live': 'polite' })}
     >
       <div style={{ textAlign: "center", marginBottom: "2rem" }}>
         <h1
@@ -119,8 +147,9 @@ function Countdown() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "var(--space-md)",
-          maxWidth: "400px",
+          gap: "var(--space-lg)",
+          maxWidth: "600px",
+          width: "100%",
           margin: "0 auto",
         }}
       >
@@ -128,7 +157,7 @@ function Countdown() {
           style={{
             textAlign: "center",
             // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-md)",
+            padding: "var(--space-lg)",
             borderRadius: "var(--radius-md)",
             color: "var(--color-text)",
           }}
@@ -155,7 +184,7 @@ function Countdown() {
           style={{
             textAlign: "center",
             // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-md)",
+            padding: "var(--space-lg)",
             borderRadius: "var(--radius-md)",
             color: "var(--color-text)",
           }}
@@ -182,7 +211,7 @@ function Countdown() {
           style={{
             textAlign: "center",
             // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-md)",
+            padding: "var(--space-lg)",
             borderRadius: "var(--radius-md)",
             color: "var(--color-text)",
           }}
@@ -209,7 +238,7 @@ function Countdown() {
           style={{
             textAlign: "center",
             // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-md)",
+            padding: "var(--space-lg)",
             borderRadius: "var(--radius-md)",
             color: "var(--color-text)",
           }}
@@ -233,19 +262,20 @@ function Countdown() {
         </div>
       </div>
 
-      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+      <div style={{ textAlign: "center", marginTop: "3rem" }}>
         <p
-          className='text-lg'
+          className='text-xl'
           style={{
             margin: 0,
             opacity: 0.95,
             textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
+            padding: "var(--space-md) 0",
           }}
         >
           Until we say "I do" My Love 💕
         </p>
       </div>
-    </section>
+    </LazyBackgroundImage>
   );
 }
 
