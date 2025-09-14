@@ -4,38 +4,59 @@ function TriviaGame() {
   const questions = [
     {
       id: 1,
-      question: "Where did Sarah and Michael first meet?",
-      options: ["Coffee shop", "Gym", "Library", "Park"],
-      correct: 0,
-      explanation: "They met at a downtown coffee shop where Sarah was reading a web development book!"
+      question: "What is Aisosa and Kunle's wedding hashtag?",
+      options: ["#AisosaAndKunle", "#ForeverTogether", "#AKindOfLove", "#WeddingBliss"],
+      correct: 2,
+      explanation: "Their beautiful wedding hashtag is #AKindOfLove - representing the special connection they share!"
     },
     {
       id: 2,
-      question: "What was their first date?",
-      options: ["Movie night", "Dinner at restaurant", "Picnic in Central Park", "Beach walk"],
-      correct: 2,
-      explanation: "Their first official date was a picnic in Central Park where they talked for hours."
+      question: "When is their traditional wedding ceremony?",
+      options: ["November 20, 2025", "November 21, 2025", "November 22, 2025", "November 23, 2025"],
+      correct: 1,
+      explanation: "The traditional wedding ceremony takes place on November 21, 2025 at the bride's father's residence."
     },
     {
       id: 3,
-      question: "When did Michael propose?",
-      options: ["December 2023", "June 2023", "March 2023", "September 2023"],
+      question: "Where will their white wedding ceremony be held?",
+      options: ["St. Peter's Cathedral", "RCCG Christ Centre", "Holy Trinity Church", "Victory Chapel"],
       correct: 1,
-      explanation: "Michael proposed in June 2023 during a sunset walk on the beach."
+      explanation: "Their white wedding ceremony will be held at RCCG Christ Centre on November 22, 2025."
     },
     {
       id: 4,
-      question: "What's Sarah's favorite type of cuisine?",
-      options: ["Italian", "Mexican", "Thai", "Japanese"],
-      correct: 2,
-      explanation: "Sarah loves Thai food - especially pad thai and green curry!"
+      question: "Where is the traditional wedding taking place?",
+      options: ["Victoria Island Lagos", "Guobadia Avenue Benin City", "Airport Road Abuja", "GRA Port Harcourt"],
+      correct: 1,
+      explanation: "The traditional wedding is at the bride's father's residence on 45B Guobadia Avenue Off Etete GRA, Benin City."
     },
     {
       id: 5,
-      question: "What hobby do Sarah and Michael enjoy together?",
-      options: ["Rock climbing", "Photography", "Cooking", "Gaming"],
+      question: "What street is the white wedding venue located on?",
+      options: ["Etete Road", "Guobadia Street", "Airport Road", "Mission Road"],
       correct: 1,
-      explanation: "They love taking photos together, especially during their travels and date nights."
+      explanation: "RCCG Christ Centre is located at 13 Guobadia Street Off Etete Road in Benin City."
+    },
+    {
+      id: 6,
+      question: "What does their love story represent according to the site?",
+      options: ["A fairy tale romance", "True partnership", "A Kind Of Love", "Destiny fulfilled"],
+      correct: 2,
+      explanation: "Their love story represents 'A Kind Of Love' - a unique and special bond that led to their beautiful union."
+    },
+    {
+      id: 7,
+      question: "What special transportation is provided on the wedding day?",
+      options: ["Luxury cars from hotels", "Bus from airport to venue", "Helicopter rides", "Train service"],
+      correct: 1,
+      explanation: "The couple is providing bus transportation from the airport to the venue on the wedding day for guests."
+    },
+    {
+      id: 8,
+      question: "What is the wedding countdown counting down to?",
+      options: ["Traditional ceremony", "White wedding", "Reception party", "Engagement party"],
+      correct: 1,
+      explanation: "The countdown is set for November 22, 2025 - their white wedding ceremony date, marking when they say 'I do'!"
     }
   ];
 
@@ -166,7 +187,7 @@ function TriviaGame() {
     <section className="section">
       <h2 className="section-title text-2xl">How Well Do You Know Us?</h2>
       <p className="text-base" style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--color-text-light)' }}>
-        Test your knowledge about Sarah and Michael!
+        Test your knowledge about Aisosa and Kunle's wedding - #AKindOfLove!
       </p>
 
       {/* Progress Bar */}

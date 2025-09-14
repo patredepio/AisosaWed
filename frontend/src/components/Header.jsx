@@ -1,24 +1,24 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-function Header({ activeSection, onNavigate }) {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavigation = (section) => {
-    onNavigate(section);
-    setIsMenuOpen(false); // Close menu after navigation
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   const navigationItems = [
-    { id: 'countdown', label: 'Countdown' },
-    { id: 'story', label: 'Our Story' },
-    { id: 'schedule', label: 'Schedule' },
-    { id: 'hotels', label: 'Hotels' },
-    { id: 'gallery', label: 'Gallery' },
-    { id: 'trivia', label: 'Trivia' }
+    { path: '/', label: 'Home' },
+    { path: '/story', label: 'Our Story' },
+    { path: '/schedule', label: 'Schedule' },
+    { path: '/hotels', label: 'Hotels' },
+    { path: '/gallery', label: 'Gallery' },
+    { path: '/trivia', label: 'Trivia' }
   ];
 
   return (
@@ -51,14 +51,17 @@ function Header({ activeSection, onNavigate }) {
         aria-label="Main navigation"
       >
         {navigationItems.map((item) => (
-          <button
-            key={item.id}
-            className={`nav-link text-base ${activeSection === item.id ? 'active' : ''}`}
-            onClick={() => handleNavigation(item.id)}
-            aria-current={activeSection === item.id ? 'page' : undefined}
+          <NavLink
+            key={item.path}
+            to={item.path}
+            className={({ isActive }) =>
+              `nav-link text-base ${isActive ? 'active' : ''}`
+            }
+            onClick={closeMenu}
+            aria-current={({ isActive }) => isActive ? 'page' : undefined}
           >
             {item.label}
-          </button>
+          </NavLink>
         ))}
       </nav>
 

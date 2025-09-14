@@ -31,21 +31,6 @@ function Schedule() {
       icon: '👗'
     },
     {
-      title: 'Weather Backup',
-      description: 'In case of rain, the ceremony will be moved to the indoor chapel. We\'ll update you via text if needed.',
-      icon: '☂️'
-    },
-    {
-      title: 'Parking',
-      description: 'Free parking available on-site. Valet service will be provided from 1:30 PM to 9:00 PM.',
-      icon: '🚗'
-    },
-    {
-      title: 'Accessibility',
-      description: 'The venue is fully wheelchair accessible. Please contact us if you need any special accommodations.',
-      icon: '♿'
-    },
-    {
       title: 'Airport Transportation',
       description: 'A bus will be provided by the couple from the airport to the venue on the wedding day. Contact us for pickup details.',
       icon: '🚌'
@@ -147,12 +132,14 @@ function Schedule() {
             Questions or Need Directions?
           </h3>
           <p className="text-base" style={{ margin: '0 0 1rem 0' }}>
-            Contact our wedding coordinator:
+            Contact us for directions and assistance:
           </p>
           <div className="text-base" style={{ margin: '0', fontWeight: 'bold' }}>
-            Emily Johnson<br />
-            📞 (555) 123-4567<br />
-            📧 coordinator@rosegardenvenue.com
+            Pharm Oghogho<br />
+            📞 09161266193<br />
+            <br />
+            Tony<br />
+            📞 07036886530
           </div>
         </div>
       </div>

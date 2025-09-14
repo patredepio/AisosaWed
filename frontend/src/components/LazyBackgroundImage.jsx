@@ -75,11 +75,12 @@ function LazyBackgroundImage({
 
   const backgroundStyle = imageLoaded && !isError
     ? {
+        ...style,
         backgroundImage: `url(${src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        ...style
+        backgroundSize: style.backgroundSize || 'cover',
+        backgroundPosition: style.backgroundPosition || 'center',
+        backgroundRepeat: style.backgroundRepeat || 'no-repeat',
+        backgroundAttachment: style.backgroundAttachment || 'scroll'
       }
     : style;
 

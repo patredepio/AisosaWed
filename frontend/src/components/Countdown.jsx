@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import LazyBackgroundImage from './LazyBackgroundImage';
+import backgroundImg from "../assets/pictures/DSC_6440.jpg";
 
 function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -82,200 +82,178 @@ function Countdown() {
   }
 
   return (
-    <LazyBackgroundImage
-      src="/DSC_6440.jpg"
-      className='section'
+    <section
+      className='section countdown-hero'
       style={{
-        background: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))",
         borderRadius: "var(--radius-lg)",
         color: "white",
-        maxWidth: "900px",
-        width: "100%",
-        minHeight: "500px",
-        margin: "0 auto",
+        minHeight: "100vh",
         position: "relative",
         padding: "var(--space-2xl) var(--space-xl)",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundPosition: "center top",
+        backgroundSize: "cover",
+        backgroundAttachment: "scroll",
+        backgroundRepeat: "no-repeat",
       }}
-      placeholder={
+      aria-live='polite'
+    >
+      <div className='countdown-content'>
+        <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+          <h1
+            className='text-2xl'
+            style={{
+              margin: "0 0 1rem 0",
+              fontWeight: "normal",
+              letterSpacing: "2px",
+            }}
+          >
+            #AKindOfLove
+          </h1>
+          <h2
+            className='text-xl'
+            style={{ margin: 0, opacity: 0.9 }}
+          >
+            Countdown to Our Wedding
+          </h2>
+        </div>
+
         <div
           style={{
-            background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
-            borderRadius: "var(--radius-lg)",
-            color: "white",
-            maxWidth: "900px",
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "var(--space-lg)",
+            maxWidth: "600px",
             width: "100%",
-            minHeight: "500px",
             margin: "0 auto",
-            padding: "var(--space-2xl) var(--space-xl)",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
           }}
+          className='countdown-grid'
         >
-          <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>📸</div>
-          <p className="text-lg" style={{ margin: 0, opacity: 0.8 }}>
-            Loading background image...
+          <div
+            style={{
+              textAlign: "center",
+              padding: "var(--space-lg)",
+              borderRadius: "var(--radius-md)",
+              color: "var(--color-text)",
+            }}
+          >
+            <div
+              className='text-2xl'
+              style={{
+                color: "var(--color-primary)",
+                marginBottom: "0.25rem",
+                fontWeight: "bold",
+              }}
+            >
+              {timeLeft.days}
+            </div>
+            <div
+              className='text-xs'
+              style={{ color: "var(--color-text-light)" }}
+            >
+              {timeLeft.days === 1 ? "Day" : "Days"}
+            </div>
+          </div>
+
+          <div
+            style={{
+              textAlign: "center",
+              // background: "rgba(255, 255, 255, 0.9)",
+              padding: "var(--space-lg)",
+              borderRadius: "var(--radius-md)",
+              color: "var(--color-text)",
+            }}
+          >
+            <div
+              className='text-2xl'
+              style={{
+                color: "var(--color-primary)",
+                marginBottom: "0.25rem",
+                fontWeight: "bold",
+              }}
+            >
+              {timeLeft.hours}
+            </div>
+            <div
+              className='text-xs'
+              style={{ color: "var(--color-text-light)" }}
+            >
+              {timeLeft.hours === 1 ? "Hour" : "Hours"}
+            </div>
+          </div>
+
+          <div
+            style={{
+              textAlign: "center",
+              // background: "rgba(255, 255, 255, 0.9)",
+              padding: "var(--space-lg)",
+              borderRadius: "var(--radius-md)",
+              color: "var(--color-text)",
+            }}
+          >
+            <div
+              className='text-2xl'
+              style={{
+                color: "var(--color-primary)",
+                marginBottom: "0.25rem",
+                fontWeight: "bold",
+              }}
+            >
+              {timeLeft.minutes}
+            </div>
+            <div
+              className='text-xs'
+              style={{ color: "var(--color-text-light)" }}
+            >
+              {timeLeft.minutes === 1 ? "Minute" : "Minutes"}
+            </div>
+          </div>
+
+          <div
+            style={{
+              textAlign: "center",
+              padding: "var(--space-lg)",
+              borderRadius: "var(--radius-md)",
+              color: "var(--color-text)",
+            }}
+          >
+            <div
+              className='text-2xl'
+              style={{
+                color: "var(--color-primary)",
+                marginBottom: "0.25rem",
+                fontWeight: "bold",
+              }}
+            >
+              {timeLeft.seconds}
+            </div>
+            <div
+              className='text-xs'
+              style={{ color: "var(--color-text-light)" }}
+            >
+              {timeLeft.seconds === 1 ? "Second" : "Seconds"}
+            </div>
+          </div>
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          <p
+            className='text-xl'
+            style={{
+              margin: 0,
+              opacity: 0.95,
+              textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
+              padding: "var(--space-md) 0",
+            }}
+          >
+            Until we say "I do" My Love 💕
           </p>
         </div>
-      }
-      {...({ 'aria-live': 'polite' })}
-    >
-      <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <h1
-          className='text-2xl'
-          style={{
-            margin: "0 0 1rem 0",
-            fontWeight: "normal",
-            letterSpacing: "2px",
-          }}
-        >
-          #AKindOfLove
-        </h1>
-        <h2
-          className='text-xl'
-          style={{ margin: 0, opacity: 0.9 }}
-        >
-          Countdown to Our Wedding
-        </h2>
       </div>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "var(--space-lg)",
-          maxWidth: "600px",
-          width: "100%",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-lg)",
-            borderRadius: "var(--radius-md)",
-            color: "var(--color-text)",
-          }}
-        >
-          <div
-            className='text-2xl'
-            style={{
-              color: "var(--color-primary)",
-              marginBottom: "0.25rem",
-              fontWeight: "bold",
-            }}
-          >
-            {timeLeft.days}
-          </div>
-          <div
-            className='text-xs'
-            style={{ color: "var(--color-text-light)" }}
-          >
-            {timeLeft.days === 1 ? "Day" : "Days"}
-          </div>
-        </div>
-
-        <div
-          style={{
-            textAlign: "center",
-            // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-lg)",
-            borderRadius: "var(--radius-md)",
-            color: "var(--color-text)",
-          }}
-        >
-          <div
-            className='text-2xl'
-            style={{
-              color: "var(--color-primary)",
-              marginBottom: "0.25rem",
-              fontWeight: "bold",
-            }}
-          >
-            {timeLeft.hours}
-          </div>
-          <div
-            className='text-xs'
-            style={{ color: "var(--color-text-light)" }}
-          >
-            {timeLeft.hours === 1 ? "Hour" : "Hours"}
-          </div>
-        </div>
-
-        <div
-          style={{
-            textAlign: "center",
-            // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-lg)",
-            borderRadius: "var(--radius-md)",
-            color: "var(--color-text)",
-          }}
-        >
-          <div
-            className='text-2xl'
-            style={{
-              color: "var(--color-primary)",
-              marginBottom: "0.25rem",
-              fontWeight: "bold",
-            }}
-          >
-            {timeLeft.minutes}
-          </div>
-          <div
-            className='text-xs'
-            style={{ color: "var(--color-text-light)" }}
-          >
-            {timeLeft.minutes === 1 ? "Minute" : "Minutes"}
-          </div>
-        </div>
-
-        <div
-          style={{
-            textAlign: "center",
-            // background: "rgba(255, 255, 255, 0.9)",
-            padding: "var(--space-lg)",
-            borderRadius: "var(--radius-md)",
-            color: "var(--color-text)",
-          }}
-        >
-          <div
-            className='text-2xl'
-            style={{
-              color: "var(--color-primary)",
-              marginBottom: "0.25rem",
-              fontWeight: "bold",
-            }}
-          >
-            {timeLeft.seconds}
-          </div>
-          <div
-            className='text-xs'
-            style={{ color: "var(--color-text-light)" }}
-          >
-            {timeLeft.seconds === 1 ? "Second" : "Seconds"}
-          </div>
-        </div>
-      </div>
-
-      <div style={{ textAlign: "center", marginTop: "3rem" }}>
-        <p
-          className='text-xl'
-          style={{
-            margin: 0,
-            opacity: 0.95,
-            textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
-            padding: "var(--space-md) 0",
-          }}
-        >
-          Until we say "I do" My Love 💕
-        </p>
-      </div>
-    </LazyBackgroundImage>
+    </section>
   );
 }
 
