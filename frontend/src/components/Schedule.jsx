@@ -7,13 +7,13 @@ function Schedule() {
     {
       id: 1,
       date: 'November 20, 2025',
-      time: 'All Day',
+      time: '2:00 PM',
       title: 'Traditional Wedding',
       location: 'Bride\'s Father\'s Residence',
       address: '45B Guobadia Avenue Off Etete GRA, Benin City',
       description: 'Join us for the traditional wedding ceremony at the bride\'s family home.',
       icon: <HouseIcon color="var(--color-primary)" size="2rem" />,
-      duration: 'Full Day',
+      duration: '6 Hours',
       googleMapsUrl: 'https://maps.google.com/?q=45B+Guobadia+Avenue+Off+Etete+GRA,+Benin+City,+Nigeria'
     },
     {
@@ -38,7 +38,7 @@ function Schedule() {
       description: 'Celebrate with us at the reception with dinner, dancing, and festivities.',
       icon: <ReceptionIcon color="var(--color-secondary)" size="2rem" />,
       duration: '6 Hours',
-      googleMapsUrl: 'https://maps.google.com/?q=Okada+Avenue+beside+National+Industrial+Court+of+Nigeria+GRA+Benin+City+Edo+State'
+      googleMapsUrl: 'https://www.google.com/maps/dir//Horatio+Event+Centre+Marquee,+3+Okada+Avenue,+Gra,+Benin+City+300102,+Edo/@6.3207019,5.6191153,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1040d3001865d08f:0xd471306eeefbb00b!2m2!1d5.6216902!2d6.3206966?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D'
     }
   ];
 

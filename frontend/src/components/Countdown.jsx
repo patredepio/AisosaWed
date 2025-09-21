@@ -9,9 +9,16 @@ function Countdown() {
     seconds: 0,
   });
   const [isWeddingDay, setIsWeddingDay] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Set wedding date - November 20, 2025 (Traditional) & November 22, 2025 (White Wedding) - Aisosa & Kunle - A Kind Of Love
   const weddingDate = new Date("2025-11-20T00:00:00").getTime();
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setImageLoaded(true);
+    img.src = backgroundImg;
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -93,14 +100,49 @@ function Countdown() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        backgroundImage: `url(${backgroundImg})`,
+        backgroundImage: imageLoaded ? `url(${backgroundImg})` : "none",
+        backgroundColor: imageLoaded ? "transparent" : "var(--color-bg-alt)",
         backgroundPosition: "center top",
         backgroundSize: "cover",
         backgroundAttachment: "scroll",
         backgroundRepeat: "no-repeat",
+        transition: "background-image 0.3s ease-in-out",
       }}
       aria-live='polite'
     >
+      {!imageLoaded && (
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
+            borderRadius: "var(--radius-lg)",
+          }}
+        >
+          <div style={{ textAlign: "center", color: "white" }}>
+            <div
+              style={{
+                width: "60px",
+                height: "60px",
+                border: "4px solid rgba(255, 255, 255, 0.3)",
+                borderTop: "4px solid white",
+                borderRadius: "50%",
+                animation: "spin 1s linear infinite",
+                margin: "0 auto 1rem",
+              }}
+            ></div>
+            <p className="text-base" style={{ margin: 0, opacity: 0.9 }}>
+              Loading beautiful moments...
+            </p>
+          </div>
+        </div>
+      )}
       <div className='countdown-content'>
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <h1
