@@ -50,7 +50,7 @@ function Schedule() {
     },
     {
       title: 'Airport Transportation',
-      description: 'A bus will be provided by the couple from the airport to the venue on the wedding day. Contact us for pickup details.',
+      description: 'Buses will be available for our guests flying down to celebrate with us, to convey them from the airport to their respective hotels.',
       icon: '🚌'
     },
     {

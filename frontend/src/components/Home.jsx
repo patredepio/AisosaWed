@@ -4,6 +4,7 @@ import Schedule from './Schedule';
 import Hotels from './Hotels';
 import Gallery from './Gallery';
 import TriviaGame from './TriviaGame';
+import ColorPalette from './ColorPalette';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Schedule />
       <Hotels />
       <Gallery />
+      <ColorPalette />
       <TriviaGame />
 
       {/* Couple Support Section */}
