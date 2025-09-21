@@ -1,1 +1,2 @@
-Traditional Wedding is 2pm  and the google link for the Edo Marquee hotel https://www.google.com/maps/dir//Horatio+Event+Centre+Marquee,+3+Okada+Avenue,+Gra,+Benin+City+300102,+Edo/@6.3207019,5.6191153,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1040d3001865d08f:0xd471306eeefbb00b!2m2!1d5.6216902!2d6.3206966?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D  then for the countdown hero background image due to the fact it will take time to load, it will  be ideal to put a image holder while image loads up in the background
+the background image placeholder is not working for the countdown hero please fix that
+

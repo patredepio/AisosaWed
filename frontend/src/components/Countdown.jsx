@@ -15,9 +15,41 @@ function Countdown() {
   const weddingDate = new Date("2025-11-20T00:00:00").getTime();
 
   useEffect(() => {
+    let mounted = true;
     const img = new Image();
-    img.onload = () => setImageLoaded(true);
+    const minLoadTime = 1000; // Minimum 1 second to show placeholder
+    const startTime = Date.now();
+
+    const handleLoad = () => {
+      if (!mounted) return;
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(0, minLoadTime - elapsed);
+
+      setTimeout(() => {
+        if (mounted) {
+          setImageLoaded(true);
+        }
+      }, remaining);
+    };
+
+    const handleError = () => {
+      if (!mounted) return;
+      console.warn('Failed to load background image');
+      // Still set as loaded to show fallback background
+      setTimeout(() => {
+        if (mounted) {
+          setImageLoaded(true);
+        }
+      }, minLoadTime);
+    };
+
+    img.onload = handleLoad;
+    img.onerror = handleError;
     img.src = backgroundImg;
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   useEffect(() => {
@@ -123,6 +155,7 @@ function Countdown() {
             justifyContent: "center",
             background: "linear-gradient(135deg, var(--color-primary), var(--color-secondary))",
             borderRadius: "var(--radius-lg)",
+            zIndex: 10,
           }}
         >
           <div style={{ textAlign: "center", color: "white" }}>
@@ -140,10 +173,18 @@ function Countdown() {
             <p className="text-base" style={{ margin: 0, opacity: 0.9 }}>
               Loading beautiful moments...
             </p>
+            <p className="text-sm" style={{ margin: "0.5rem 0 0 0", opacity: 0.7 }}>
+              #AKindOfLove
+            </p>
           </div>
         </div>
       )}
-      <div className='countdown-content'>
+      <div className='countdown-content' style={{
+        position: "relative",
+        zIndex: 2,
+        opacity: imageLoaded ? 1 : 0,
+        transition: "opacity 0.5s ease-in-out"
+      }}>
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <h1
             className='text-2xl'
