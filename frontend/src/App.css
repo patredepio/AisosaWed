@@ -818,7 +818,12 @@ body {
     margin-top: calc(-30px) !important;
   }
 }
-
+/* very Large Screen */
+@media (min-width:1200px) {
+  .countdown-hero{
+   min-height: 810px !important ;
+  }
+}
 /* Mobile and tablet - no full width */
 .countdown-hero {
   margin-top: calc(-30px) !important;
