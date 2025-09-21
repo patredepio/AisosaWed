@@ -22,12 +22,30 @@ function Hotels() {
     },
     {
       id: 3,
-      name: 'Shamrock Manor The Residence',
-      address: '20 2nd Ugbor Road, Oka, Benin City, Edo State',
+      name: 'The Residence Hotel and Suites',
+      address: '32 Akhionbare Street Oka Benin City 300102 Edo State',
       priceRange: '₦55,000 - ₦200,000',
       icon: <HotelIcon color="var(--color-primary)" size="2rem" />,
-      description: 'Premium hotel offering luxury accommodations and superior service with outdoor pool and restaurant.',
-      googleMapsUrl: 'https://maps.google.com/?q=20+2nd+Ugbor+Road+Oka+Benin+City+Edo+State+Nigeria'
+      description: 'Premium hotel offering luxury accommodations and superior service in the heart of Oka.',
+      googleMapsUrl: 'https://maps.google.com/?q=32+Akhionbare+Street+Oka+Benin+City+300102+Edo+State+Nigeria'
+    },
+    {
+      id: 4,
+      name: 'Vertus Hotel and Suites',
+      address: '28 Akhionbare Street Off Ihama Road GRA Benin City 300102 Edo State',
+      priceRange: '₦85,000 - ₦250,000',
+      icon: <HotelIcon color="var(--color-secondary)" size="2rem" />,
+      description: 'Luxury hotel with premium amenities and excellent service in the prestigious GRA area.',
+      googleMapsUrl: 'https://maps.google.com/?q=28+Akhionbare+Street+Off+Ihama+Road+GRA+Benin+City+300102+Edo+State+Nigeria'
+    },
+    {
+      id: 5,
+      name: 'Pearl Hilton INT\'L Hotel LTD',
+      address: 'NO 2, OBADIGIE AVENUE, OFF JEMIDE AVENUE OFF GIWA-AMU ROAD GRA, BENIN CITY EDO STATE',
+      priceRange: '₦50,000 - ₦100,000',
+      icon: <HotelIcon color="var(--color-primary)" size="2rem" />,
+      description: 'Quality accommodation with modern facilities and convenient location in GRA.',
+      googleMapsUrl: 'https://maps.google.com/?q=NO+2+OBADIGIE+AVENUE+OFF+JEMIDE+AVENUE+OFF+GIWA-AMU+ROAD+GRA+BENIN+CITY+EDO+STATE+Nigeria'
     }
   ];
 

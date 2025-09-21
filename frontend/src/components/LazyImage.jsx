@@ -26,7 +26,7 @@ function LazyImage({
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'
+        rootMargin: '100px' // Increase loading distance for better perceived performance
       }
     );
 
@@ -47,6 +47,14 @@ function LazyImage({
     setIsError(true);
     onError();
   };
+
+  // Preload image when it comes into view for faster loading
+  useEffect(() => {
+    if (isInView && !isError) {
+      const img = new Image();
+      img.src = src;
+    }
+  }, [isInView, src, isError]);
 
   const defaultPlaceholder = (
     <div

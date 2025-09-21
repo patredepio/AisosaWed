@@ -88,10 +88,9 @@ function Gallery() {
         },
       ];
 
-      setTimeout(() => {
-        setPhotos(weddingPhotos);
-        setLoading(false);
-      }, 800);
+      // Load photos immediately for better performance
+      setPhotos(weddingPhotos);
+      setLoading(false);
     } catch (err) {
       setError("Failed to load photos");
       setLoading(false);

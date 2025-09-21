@@ -31,7 +31,7 @@ function Schedule() {
     {
       id: 3,
       date: 'November 22, 2025',
-      time: '2:00 PM',
+      time: '3:00 PM',
       title: 'Reception',
       location: 'Edo Hotel Marquee',
       address: 'Okada Avenue beside National Industrial Court of Nigeria GRA Benin City Edo State',
@@ -119,11 +119,16 @@ function Schedule() {
                       rel="noopener noreferrer"
                       className="btn"
                       style={{
-                        fontSize: 'var(--font-xs)',
-                        padding: 'var(--space-xs) var(--space-sm)',
-                        marginTop: 'var(--space-xs)',
+                        fontSize: 'var(--font-sm)',
+                        padding: 'var(--space-sm) var(--space-md)',
+                        marginTop: 'var(--space-sm)',
                         display: 'inline-block',
-                        textDecoration: 'none'
+                        textDecoration: 'none',
+                        fontWeight: 'bold',
+                        color: 'white',
+                        backgroundColor: 'var(--color-primary)',
+                        border: '2px solid var(--color-secondary)',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
                       }}
                     >
                       📍 View on Google Maps
