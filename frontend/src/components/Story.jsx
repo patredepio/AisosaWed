@@ -34,7 +34,7 @@ function Story() {
       id: 5,
       date: 'November 22, 2025',
       title: 'White Wedding',
-      description: 'At The Redeem Christian Church of God Upper Room Parish, we exchange vows before God and our loved ones. This marks the beginning of our married life together - #AKindOfLove that will last forever.',
+      description: 'At The Redeemed Christian Church of God Upper Room Parish, we exchange vows before God and our loved ones. This marks the beginning of our married life together - #AKindOfLove that will last forever.',
       icon: '💒'
     }
   ];

@@ -19,9 +19,9 @@ function TriviaGame() {
     {
       id: 3,
       question: "Where will their white wedding ceremony be held?",
-      options: ["St. Peter's Cathedral", "The Redeem Christian Church of God Upper Room Parish", "Holy Trinity Church", "Victory Chapel"],
+      options: ["St. Peter's Cathedral", "The Redeemed Christian Church of God Upper Room Parish", "Holy Trinity Church", "Victory Chapel"],
       correct: 1,
-      explanation: "Their white wedding ceremony will be held at The Redeem Christian Church of God Upper Room Parish on November 22, 2025."
+      explanation: "Their white wedding ceremony will be held at The Redeemed Christian Church of God Upper Room Parish on November 22, 2025."
     },
     {
       id: 4,
@@ -35,7 +35,7 @@ function TriviaGame() {
       question: "What street is the white wedding venue located on?",
       options: ["Etete Road", "Redeemed Christian Church way", "Airport Road", "Mission Road"],
       correct: 1,
-      explanation: "The Redeem Christian Church of God Upper Room Parish is located at No. 3 Redeemed Christian Church way, off Adesuwa Girls Grammar School Road in Benin City."
+      explanation: "The Redeemed Christian Church of God Upper Room Parish is located at No. 3 Redeemed Christian Church way, off Adesuwa Girls Grammar School Road in Benin City."
     },
     {
       id: 6,

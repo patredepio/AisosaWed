@@ -21,7 +21,7 @@ function Schedule() {
       date: 'November 22, 2025',
       time: '12:00 PM',
       title: 'White Wedding',
-      location: 'The Redeem Christian Church of God Upper Room Parish',
+      location: 'The Redeemed Christian Church of God Upper Room Parish',
       address: 'No. 3 Redeemed Christian Church way, off Adesuwa Girls Grammar School Road, G.R.A. Benin City, Edo State, Nigeria',
       description: 'Join us as we exchange vows in a beautiful church ceremony.',
       icon: <ChurchIcon color="var(--color-primary)" size="2rem" />,
